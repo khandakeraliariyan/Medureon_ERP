@@ -30,6 +30,24 @@ const getCategories =
 
     };
 
+const getCategoryById =
+    async (id) => {
+
+        const category =
+            await Category.findOne({
+                _id: id,
+                isDeleted: false,
+            });
+
+        if (!category) {
+            throw new Error(
+                "Category not found"
+            );
+        }
+
+        return category;
+    };
+
 const updateCategory =
     async (
         id,
@@ -64,6 +82,7 @@ const deleteCategory =
 module.exports = {
     createCategory,
     getCategories,
+    getCategoryById,
     updateCategory,
     deleteCategory,
 };
