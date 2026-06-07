@@ -28,7 +28,22 @@ const loginSchema = z.object({
     }),
 });
 
+const changePasswordSchema =
+    z.object({
+        body: z.object({
+
+            oldPassword:
+                z.string(),
+
+            newPassword:
+                z.string()
+                    .min(6),
+
+        }),
+    });
+
 module.exports = {
     registerSchema,
     loginSchema,
+    changePasswordSchema,
 };
