@@ -60,7 +60,120 @@ const login =
         }
     };
 
+const getProfile =
+    async (
+        req,
+        res,
+        next
+    ) => {
+
+        try {
+
+            const result =
+                await authService.getMe(
+                    req.user._id
+                );
+
+            res.json({
+                success: true,
+                data: result,
+            });
+
+        } catch (err) {
+            next(err);
+        }
+
+    };
+
+const changePassword =
+    async (
+        req,
+        res,
+        next
+    ) => {
+
+        try {
+
+            const {
+                oldPassword,
+                newPassword,
+            } = req.body;
+
+            await authService
+                .changePassword(
+                    req.user._id,
+                    oldPassword,
+                    newPassword
+                );
+
+            res.json({
+                success: true,
+                message:
+                    "Password updated",
+            });
+
+        } catch (err) {
+            next(err);
+        }
+
+    };
+
+const getUsers =
+    async (
+        req,
+        res,
+        next
+    ) => {
+
+        try {
+
+            const result =
+                await authService
+                    .getAllUsers();
+
+            res.json({
+                success: true,
+                data: result,
+            });
+
+        } catch (err) {
+            next(err);
+        }
+
+    };
+
+const updateRole =
+    async (
+        req,
+        res,
+        next
+    ) => {
+
+        try {
+
+            const result =
+                await authService
+                    .updateRole(
+                        req.params.id,
+                        req.body.role
+                    );
+
+            res.json({
+                success: true,
+                data: result,
+            });
+
+        } catch (err) {
+            next(err);
+        }
+
+    };
+
 module.exports = {
     register,
     login,
+    getProfile,
+    changePassword,
+    getUsers,
+    updateRole
 };
