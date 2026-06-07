@@ -35,5 +35,37 @@ router.post(
     login
 );
 
+router.get(
+    "/me",
+    protect,
+    getProfile
+);
+
+router.patch(
+    "/change-password",
+    protect,
+    validateRequest(
+        changePasswordSchema
+    ),
+    changePassword
+);
+
+router.get(
+    "/users",
+    protect,
+    authorize(
+        "admin",
+        "manager"
+    ),
+    getUsers
+);
+
+router.patch(
+    "/users/:id/role",
+    protect,
+    authorize("admin"),
+    updateRole
+);
+
 module.exports =
     router;
