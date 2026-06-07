@@ -7,15 +7,26 @@ const router =
 const validateRequest =
     require("../../middleware/validateRequest");
 
+const protect =
+    require("../../middleware/authMiddleware");
+
+const authorize =
+    require("../../middleware/roleMiddleware");
+
 const {
     registerSchema,
     loginSchema,
+    changePasswordSchema,
 } =
     require("./auth.validation");
 
 const {
     register,
     login,
+    getProfile,
+    changePassword,
+    getUsers,
+    updateRole,
 } =
     require("./auth.controller");
 
