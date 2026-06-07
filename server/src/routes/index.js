@@ -19,6 +19,11 @@ const categoryRoutes =
         "../modules/categories/category.route"
     );
 
+const productRoutes =
+    require(
+        "../modules/products/product.route"
+    );
+
 router.use(
     "/auth",
     authRoutes
@@ -32,6 +37,11 @@ router.use(
 router.use(
     "/categories",
     categoryRoutes
+);
+
+router.use(
+    "/products",
+    productRoutes
 );
 
 module.exports =
