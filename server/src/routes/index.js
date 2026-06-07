@@ -14,6 +14,11 @@ const supplierRoutes =
         "../modules/suppliers/supplier.route"
     );
 
+const categoryRoutes =
+    require(
+        "../modules/categories/category.route"
+    );
+
 router.use(
     "/auth",
     authRoutes
@@ -22,6 +27,11 @@ router.use(
 router.use(
     "/suppliers",
     supplierRoutes
+);
+
+router.use(
+    "/categories",
+    categoryRoutes
 );
 
 module.exports =
