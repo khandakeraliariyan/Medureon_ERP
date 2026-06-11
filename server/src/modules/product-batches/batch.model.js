@@ -1,20 +1,13 @@
 const mongoose =
     require("mongoose");
 
-const productBatchSchema =
+const batchSchema =
     new mongoose.Schema(
         {
             product: {
                 type:
                     mongoose.Schema.Types.ObjectId,
                 ref: "Product",
-                required: true,
-            },
-
-            supplier: {
-                type:
-                    mongoose.Schema.Types.ObjectId,
-                ref: "Supplier",
                 required: true,
             },
 
@@ -40,12 +33,12 @@ const productBatchSchema =
 
             quantity: {
                 type: Number,
-                required: true,
+                default: 0,
             },
 
-            remainingQuantity: {
+            availableQuantity: {
                 type: Number,
-                required: true,
+                default: 0,
             },
 
             status: {
@@ -53,9 +46,13 @@ const productBatchSchema =
                 enum: [
                     "active",
                     "expired",
-                    "sold_out",
                 ],
                 default: "active",
+            },
+
+            isDeleted: {
+                type: Boolean,
+                default: false,
             },
         },
         {
@@ -66,5 +63,5 @@ const productBatchSchema =
 module.exports =
     mongoose.model(
         "ProductBatch",
-        productBatchSchema
+        batchSchema
     );
