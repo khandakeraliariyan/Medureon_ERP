@@ -29,6 +29,11 @@ const batchRoutes =
         "../modules/product-batches/batch.route"
     );
 
+const inventoryTransactionRoutes =
+    require(
+        "../modules/inventory-transactions/inventoryTransaction.route"
+    );
+
 router.use(
     "/auth",
     authRoutes
@@ -52,6 +57,11 @@ router.use(
 router.use(
     "/batches",
     batchRoutes
+);
+
+router.use(
+    "/inventory-transactions",
+    inventoryTransactionRoutes
 );
 
 module.exports =
