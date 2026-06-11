@@ -34,6 +34,11 @@ const inventoryTransactionRoutes =
         "../modules/inventory-transactions/inventoryTransaction.route"
     );
 
+const stockInRoutes =
+    require(
+        "../modules/stock-ins/stockIn.route"
+    );
+
 router.use(
     "/auth",
     authRoutes
@@ -62,6 +67,11 @@ router.use(
 router.use(
     "/inventory-transactions",
     inventoryTransactionRoutes
+);
+
+router.use(
+    "/stock-ins",
+    stockInRoutes
 );
 
 module.exports =
