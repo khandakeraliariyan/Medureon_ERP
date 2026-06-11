@@ -24,6 +24,11 @@ const productRoutes =
         "../modules/products/product.route"
     );
 
+const batchRoutes =
+    require(
+        "../modules/product-batches/batch.route"
+    );
+
 router.use(
     "/auth",
     authRoutes
@@ -42,6 +47,11 @@ router.use(
 router.use(
     "/products",
     productRoutes
+);
+
+router.use(
+    "/batches",
+    batchRoutes
 );
 
 module.exports =
