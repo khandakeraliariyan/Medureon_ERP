@@ -44,6 +44,11 @@ const customerRoutes =
         "../modules/customers/customer.route"
     );
 
+const saleRoutes =
+    require(
+        "../modules/sales/sale.route"
+    );
+
 router.use(
     "/auth",
     authRoutes
@@ -82,6 +87,11 @@ router.use(
 router.use(
     "/customers",
     customerRoutes
+);
+
+router.use(
+    "/sales",
+    saleRoutes
 );
 
 module.exports =
