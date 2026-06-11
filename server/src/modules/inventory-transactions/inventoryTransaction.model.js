@@ -8,6 +8,7 @@ const inventoryTransactionSchema =
                 type:
                     mongoose.Schema.Types.ObjectId,
                 ref: "Product",
+                required: true,
             },
 
             batch: {
@@ -16,13 +17,14 @@ const inventoryTransactionSchema =
                 ref: "ProductBatch",
             },
 
-            transactionType: {
+            type: {
                 type: String,
                 enum: [
                     "purchase",
                     "sale",
                     "return",
                     "adjustment",
+                    "damage",
                 ],
                 required: true,
             },
@@ -32,22 +34,7 @@ const inventoryTransactionSchema =
                 required: true,
             },
 
-            previousStock: {
-                type: Number,
-                required: true,
-            },
-
-            currentStock: {
-                type: Number,
-                required: true,
-            },
-
-            referenceId: {
-                type:
-                    mongoose.Schema.Types.ObjectId,
-            },
-
-            notes: String,
+            note: String,
 
             createdBy: {
                 type:
