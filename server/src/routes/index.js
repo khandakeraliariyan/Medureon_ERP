@@ -39,6 +39,11 @@ const stockInRoutes =
         "../modules/stock-ins/stockIn.route"
     );
 
+const customerRoutes =
+    require(
+        "../modules/customers/customer.route"
+    );
+
 router.use(
     "/auth",
     authRoutes
@@ -72,6 +77,11 @@ router.use(
 router.use(
     "/stock-ins",
     stockInRoutes
+);
+
+router.use(
+    "/customers",
+    customerRoutes
 );
 
 module.exports =
