@@ -34,12 +34,16 @@ const inventoryTransactionSchema =
                 required: true,
             },
 
-            note: String,
+            note: {
+                type: String,
+                default: "",
+            },
 
             createdBy: {
                 type:
                     mongoose.Schema.Types.ObjectId,
                 ref: "User",
+                required: true,
             },
         },
         {
