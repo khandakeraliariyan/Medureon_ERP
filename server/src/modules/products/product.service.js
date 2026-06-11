@@ -167,24 +167,15 @@ const getExpiringSoonProducts =
 
     };
 
-const getExpiringSoonProducts =
-    async () => {
+const getProductByBarcode =
+    async (barcode) => {
 
-        const next30Days =
-            new Date();
-
-        next30Days.setDate(
-            next30Days.getDate() + 30
-        );
-
-        return await Product.find({
-            expiryDate: {
-                $lte: next30Days,
-                $gte: new Date(),
-            },
+        return await Product.findOne({
+            barcode,
             isDeleted: false,
-        });
-
+        })
+            .populate("category")
+            .populate("supplier");
     };
 
 module.exports = {
