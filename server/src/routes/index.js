@@ -49,6 +49,11 @@ const saleRoutes =
         "../modules/sales/sale.route"
     );
 
+const invoiceRoutes =
+    require(
+        "../modules/invoices/invoice.route"
+    );
+
 router.use(
     "/auth",
     authRoutes
@@ -92,6 +97,11 @@ router.use(
 router.use(
     "/sales",
     saleRoutes
+);
+
+router.use(
+    "/invoices",
+    invoiceRoutes
 );
 
 module.exports =
