@@ -64,6 +64,11 @@ const analyticsRoutes =
         "../modules/analytics/analytics.route"
     );
 
+const auditLogRoutes =
+    require(
+        "../modules/audit-logs/auditLog.route"
+    );
+
 router.use(
     "/auth",
     authRoutes
@@ -122,6 +127,11 @@ router.use(
 router.use(
     "/analytics",
     analyticsRoutes
+);
+
+router.use(
+    "/audit-logs",
+    auditLogRoutes
 );
 
 module.exports =
