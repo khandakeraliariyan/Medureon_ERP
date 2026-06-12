@@ -54,6 +54,11 @@ const invoiceRoutes =
         "../modules/invoices/invoice.route"
     );
 
+const lendingRoutes =
+    require(
+        "../modules/lendings/lending.route"
+    );
+
 router.use(
     "/auth",
     authRoutes
@@ -102,6 +107,11 @@ router.use(
 router.use(
     "/invoices",
     invoiceRoutes
+);
+
+router.use(
+    "/lendings",
+    lendingRoutes
 );
 
 module.exports =
