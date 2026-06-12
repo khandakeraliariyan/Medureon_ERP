@@ -59,6 +59,11 @@ const lendingRoutes =
         "../modules/lendings/lending.route"
     );
 
+const analyticsRoutes =
+    require(
+        "../modules/analytics/analytics.route"
+    );
+
 router.use(
     "/auth",
     authRoutes
@@ -112,6 +117,11 @@ router.use(
 router.use(
     "/lendings",
     lendingRoutes
+);
+
+router.use(
+    "/analytics",
+    analyticsRoutes
 );
 
 module.exports =
