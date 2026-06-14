@@ -94,6 +94,11 @@ const exportRoutes =
         "../modules/exports/export.route"
     );
 
+const employeeRoutes =
+    require(
+        "../modules/employees/employee.route"
+    );
+
 router.use(
     "/auth",
     authRoutes
@@ -182,6 +187,11 @@ router.use(
 router.use(
     "/exports",
     exportRoutes
+);
+
+router.use(
+    "/employees",
+    employeeRoutes
 );
 
 module.exports =
