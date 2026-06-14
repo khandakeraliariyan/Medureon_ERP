@@ -79,6 +79,11 @@ const settingRoutes =
         "../modules/settings/setting.route"
     );
 
+const reportRoutes =
+    require(
+        "../modules/reports/report.route"
+    );
+
 router.use(
     "/auth",
     authRoutes
@@ -152,6 +157,11 @@ router.use(
 router.use(
     "/settings",
     settingRoutes
+);
+
+router.use(
+    "/reports",
+    reportRoutes
 );
 
 module.exports =
