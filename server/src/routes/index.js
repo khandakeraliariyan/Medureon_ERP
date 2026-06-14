@@ -99,6 +99,13 @@ const employeeRoutes =
         "../modules/employees/employee.route"
     );
 
+const attendanceRoutes =
+    require(
+        "../modules/attendance/attendance.route"
+    );
+
+
+
 router.use(
     "/auth",
     authRoutes
@@ -192,6 +199,11 @@ router.use(
 router.use(
     "/employees",
     employeeRoutes
+);
+
+router.use(
+    "/attendance",
+    attendanceRoutes
 );
 
 module.exports =
