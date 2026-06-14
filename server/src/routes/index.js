@@ -69,6 +69,11 @@ const auditLogRoutes =
         "../modules/audit-logs/auditLog.route"
     );
 
+const notificationRoutes =
+    require(
+        "../modules/notifications/notification.route"
+    );
+
 router.use(
     "/auth",
     authRoutes
@@ -132,6 +137,11 @@ router.use(
 router.use(
     "/audit-logs",
     auditLogRoutes
+);
+
+router.use(
+    "/notifications",
+    notificationRoutes
 );
 
 module.exports =
