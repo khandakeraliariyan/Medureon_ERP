@@ -74,17 +74,6 @@ const getEmployeeById =
 
     };
 
-const getEmployeeById =
-    async (id) => {
-
-        return await Employee.findById(id)
-            .populate(
-                "user",
-                "name email role"
-            );
-
-    };
-
 const updateEmployee =
     async (
         id,
