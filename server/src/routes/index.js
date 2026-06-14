@@ -74,6 +74,11 @@ const notificationRoutes =
         "../modules/notifications/notification.route"
     );
 
+const settingRoutes =
+    require(
+        "../modules/settings/setting.route"
+    );
+
 router.use(
     "/auth",
     authRoutes
@@ -142,6 +147,11 @@ router.use(
 router.use(
     "/notifications",
     notificationRoutes
+);
+
+router.use(
+    "/settings",
+    settingRoutes
 );
 
 module.exports =
