@@ -89,6 +89,11 @@ const uploadRoutes =
         "../modules/uploads/upload.route"
     );
 
+const exportRoutes =
+    require(
+        "../modules/exports/export.route"
+    );
+
 router.use(
     "/auth",
     authRoutes
@@ -172,6 +177,11 @@ router.use(
 router.use(
     "/uploads",
     uploadRoutes
+);
+
+router.use(
+    "/exports",
+    exportRoutes
 );
 
 module.exports =
