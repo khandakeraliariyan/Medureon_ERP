@@ -84,6 +84,11 @@ const reportRoutes =
         "../modules/reports/report.route"
     );
 
+const uploadRoutes =
+    require(
+        "../modules/uploads/upload.route"
+    );
+
 router.use(
     "/auth",
     authRoutes
@@ -162,6 +167,11 @@ router.use(
 router.use(
     "/reports",
     reportRoutes
+);
+
+router.use(
+    "/uploads",
+    uploadRoutes
 );
 
 module.exports =
