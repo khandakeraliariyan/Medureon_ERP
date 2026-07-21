@@ -1,0 +1,29 @@
+.pc-logo {
+  display: inline-flex;
+  align-items: center;
+  gap: 10px;
+  font-weight: 700;
+  font-size: 22px;
+  color: var(--green-800);
+  line-height: 1.1;
+}
+
+.pc-logo-mark {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  background: var(--green-800);
+  color: #fff;
+  border-radius: 9px;
+  flex-shrink: 0;
+}
+
+.pc-logo-text {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+}
+
+.pc-logo-sub {
+  font-size: 22px;
+}
