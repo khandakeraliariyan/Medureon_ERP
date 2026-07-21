@@ -1,3 +1,4 @@
+import { Link } from 'react-router-dom';
 import AppShell from '../../components/app-shell/AppShell';
 import StatCard from '../../components/ui/StatCard';
 import Badge from '../../components/ui/Badge';
@@ -16,6 +17,7 @@ export default function InventoryPage() {
   return (
     <AppShell active="Inventory" title="Inventory Management" subtitle="Manage pharmaceutical stocks, batch details, and pricing compliance." actions={
       <>
+        <Link to="/app/inventory/stock-in" className="btn btn-outline"><Icon name="cart" size={16} /> Stock In</Link>
         <button type="button" className="btn btn-outline"><Icon name="download" size={16} /> Export CSV</button>
         <button type="button" className="btn btn-solid"><Icon name="plus" size={16} /> Add Product</button>
       </>
