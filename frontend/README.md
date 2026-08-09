@@ -1,16 +1,87 @@
-# React + Vite
+# Medureon ERP — Frontend
 
-This template provides a minimal setup to get React working in Vite with HMR and some Oxlint rules.
+React + Vite frontend for the Medureon Pharmacy ERP system. It talks to the API documented in [server/README.md](../server/README.md).
 
-Currently, two official plugins are available:
+## Tech stack
 
-- [@vitejs/plugin-react](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react) uses [Oxc](https://oxc.rs)
-- [@vitejs/plugin-react-swc](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react-swc) uses [SWC](https://swc.rs/)
+- React 19
+- React Router 7
+- Vite 8
+- Oxlint
 
-## React Compiler
+## Getting started
 
-The React Compiler is not enabled on this template because of its impact on dev & build performances. To add it, see [this documentation](https://react.dev/learn/react-compiler/installation).
+```bash
+cd frontend
+npm install
+npm run dev
+```
 
-## Expanding the Oxlint configuration
+By default the app calls the API at `http://localhost:5000/api/v1`. To point it elsewhere, create a `.env` file:
 
-If you are developing a production application, we recommend using TypeScript with type-aware lint rules enabled. Check out the [TS template](https://github.com/vitejs/vite/tree/main/packages/create-vite/template-react-ts) for information on how to integrate TypeScript and Oxlint's TypeScript related rules in your project.
+```text
+VITE_API_BASE_URL=http://localhost:5000/api/v1
+```
+
+## Scripts
+
+| Command           | Description                       |
+| ------------------ | ---------------------------------- |
+| `npm run dev`       | Start the Vite dev server with HMR |
+| `npm run build`     | Build for production               |
+| `npm run preview`   | Preview the production build       |
+| `npm run lint`      | Run Oxlint                         |
+
+## Project structure
+
+```text
+src/
+├── api/            # API client functions (auth, etc.)
+├── assets/         # Static assets
+├── components/      # Shared/reusable components
+│   ├── app-shell/    # App shell layout (sidebar/header for logged-in views)
+│   └── ui/           # UI primitives (Badge, Pagination, StatCard, ...)
+├── pages/          # Route-level pages, grouped by feature
+│   ├── analytics/
+│   ├── dashboard/
+│   ├── inventory/
+│   ├── invoice/
+│   ├── lending/
+│   ├── notifications/
+│   ├── patients/
+│   ├── pos/
+│   ├── settings/
+│   ├── suppliers/
+│   └── users/
+├── App.jsx         # Route definitions
+└── main.jsx        # App entry point
+```
+
+## Routes
+
+| Path                          | Page                  |
+| ------------------------------ | --------------------- |
+| `/`                             | Landing page           |
+| `/register`                     | Register               |
+| `/login`                        | Login                  |
+| `/forgot-password`              | Forgot password        |
+| `/app/dashboard`                | Dashboard              |
+| `/app/inventory`                | Inventory              |
+| `/app/inventory/stock-in`       | Stock-in               |
+| `/app/suppliers`                | Suppliers              |
+| `/app/pos`                      | Point of sale          |
+| `/app/analytics`                | Sales history / analytics |
+| `/app/patients`                 | Customers              |
+| `/app/lending`                  | Lending                |
+| `/app/notifications`            | Notifications           |
+| `/app/users`                    | User management         |
+| `/app/settings`                 | Settings                |
+| `/app/invoice/:id`              | Invoice detail          |
+
+## Linting
+
+This project uses [Oxlint](https://oxc.rs) for linting:
+
+```bash
+npm run lint
+```
