@@ -7,14 +7,14 @@ import '../../components/ui/ui.css';
 import './UserManagementPage.css';
 
 const USERS = [
-  { name: 'Felix Henderson', email: 'f.henderson@pharmacore.com', role: 'ADMIN', tone: 'green', active: true, login: 'Oct 24, 2024 · 10:24 AM' },
-  { name: 'Sarah Jenkins', email: 's.jenkins@pharmacore.com', role: 'CASHIER', tone: 'blue', active: true, login: 'Oct 23, 2024 · 04:12 PM' },
-  { name: 'Marcus Thorne', email: 'm.thorne@pharmacore.com', role: 'INVENTORY', tone: 'blue', active: false, login: 'Sep 12, 2024 · 09:00 AM' },
+  { name: 'Felix Henderson', email: 'f.henderson@medureon.com', role: 'ADMIN', tone: 'green', active: true, login: 'Oct 24, 2024 · 10:24 AM' },
+  { name: 'Sarah Jenkins', email: 's.jenkins@medureon.com', role: 'CASHIER', tone: 'blue', active: true, login: 'Oct 23, 2024 · 04:12 PM' },
+  { name: 'Marcus Thorne', email: 'm.thorne@medureon.com', role: 'INVENTORY', tone: 'blue', active: false, login: 'Sep 12, 2024 · 09:00 AM' },
 ];
 
 export default function UserManagementPage() {
   return (
-    <AppShell active="User Management" title="User Management" subtitle="Manage staff access levels, roles, and account statuses for PharmaCore ERP." actions={
+    <AppShell active="User Management" title="User Management" subtitle="Manage staff access levels, roles, and account statuses for Medureon ERP." actions={
       <button type="button" className="btn btn-solid"><Icon name="userPlus" size={16} /> Add New User</button>
     }>
       <div className="stat-grid">

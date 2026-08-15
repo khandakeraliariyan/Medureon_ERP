@@ -62,15 +62,15 @@ export default function LoginPage() {
               </div>
             </div>
             <div className="login-preview-caption">
-              <strong>PHARMACY OS</strong>
-              <span>Intelligent Management for Modern Pharmacies</span>
+              <strong>MEDUREON OS</strong>
+              <span>Intelligent Management for Modern Healthcare Operations</span>
             </div>
           </div>
 
-          <h2 className="login-headline">Intelligent management for modern pharmacies.</h2>
+          <h2 className="login-headline">Intelligent management for modern healthcare operations.</h2>
           <p className="login-subtext">
             Precision-engineered software designed to streamline operations, optimize inventory, and enhance
-            patient care through advanced analytics.
+            care delivery through advanced analytics.
           </p>
         </div>
 
@@ -78,7 +78,7 @@ export default function LoginPage() {
           <div className="auth-card login-card">
             <h1 className="auth-card-title" style={{ textAlign: 'left' }}>Welcome Back</h1>
             <p className="auth-card-subtitle" style={{ textAlign: 'left' }}>
-              Access your pharmacy management dashboard
+              Access your Medureon management dashboard
             </p>
 
             <form onSubmit={handleSubmit} noValidate>
@@ -91,7 +91,7 @@ export default function LoginPage() {
                   <input
                     id="email"
                     type="email"
-                    placeholder="name@pharmacy.com"
+                    placeholder="name@medureon.com"
                     value={email}
                     onChange={(e) => setEmail(e.target.value)}
                     required
@@ -153,7 +153,7 @@ export default function LoginPage() {
           </p>
 
           <footer className="auth-footer">
-            © {new Date().getFullYear()} PharmaCore ERP Systems. Precise Care.
+            © {new Date().getFullYear()} Medureon ERP Systems. Precise Care.
             <div className="auth-footer-links">
               <a href="#privacy">Privacy Policy</a>
               <a href="#compliance">Compliance</a>

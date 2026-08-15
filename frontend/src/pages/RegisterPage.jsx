@@ -7,7 +7,7 @@ import '../components/Logo.css';
 import '../components/AuthShell.css';
 
 const ROLES = [
-  { value: 'inventory', label: 'Pharmacist', icon: 'building' },
+  { value: 'inventory', label: 'Operations', icon: 'building' },
   { value: 'manager', label: 'Manager', icon: 'user' },
   { value: 'admin', label: 'Admin', icon: 'shieldCheck' },
 ];
@@ -80,7 +80,7 @@ export default function RegisterPage() {
       <main className="auth-main">
         <div className="auth-card">
           <h1 className="auth-card-title">Create Institution Account</h1>
-          <p className="auth-card-subtitle">Register your pharmacy for the industry&apos;s leading ERP system.</p>
+          <p className="auth-card-subtitle">Register your organization for Medureon&apos;s leading ERP system.</p>
 
           <form onSubmit={handleSubmit} noValidate>
             {error && <div className="form-error-banner">{error}</div>}
@@ -102,13 +102,13 @@ export default function RegisterPage() {
               </div>
 
               <div className="form-field">
-                <label htmlFor="pharmacyName">Pharmacy Name</label>
+                <label htmlFor="pharmacyName">Organization Name</label>
                 <div className="input-wrap">
                   <FieldIcon name="building" />
                   <input
                     id="pharmacyName"
                     type="text"
-                    placeholder="Central Health Pharma"
+                    placeholder="Medureon Health Group"
                     value={form.pharmacyName}
                     onChange={update('pharmacyName')}
                   />
@@ -122,7 +122,7 @@ export default function RegisterPage() {
                   <input
                     id="email"
                     type="email"
-                    placeholder="admin@pharmacy.com"
+                    placeholder="admin@medureon.com"
                     value={form.email}
                     onChange={update('email')}
                     required
@@ -214,7 +214,7 @@ export default function RegisterPage() {
       </main>
 
       <footer className="auth-footer">
-        © {new Date().getFullYear()} PharmaCore ERP Systems. Precise Care.
+        © {new Date().getFullYear()} Medureon ERP Systems. Precise Care.
       </footer>
     </div>
   );

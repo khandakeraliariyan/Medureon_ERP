@@ -26,7 +26,7 @@ export default function AppShell({ active, title, subtitle, actions, children, s
     <div className="shell">
       <aside className="shell-sidebar">
         <div>
-          <div className="shell-logo">PharmaCore</div>
+          <div className="shell-logo">Medureon</div>
           <div className="shell-branch">
             <Icon name="building" size={22} />
             <div>
@@ -94,8 +94,8 @@ export default function AppShell({ active, title, subtitle, actions, children, s
         </main>
 
         <footer className="shell-footer">
-          <span className="shell-footer-brand">PharmaCore</span>
-          <span>© {new Date().getFullYear()} PharmaCore ERP Systems. Precise Care.</span>
+          <span className="shell-footer-brand">Medureon</span>
+          <span>© {new Date().getFullYear()} Medureon ERP Systems. Precise Care.</span>
           <div className="shell-footer-links">
             <a href="#privacy">Privacy Policy</a>
             <a href="#terms">Terms of Service</a>

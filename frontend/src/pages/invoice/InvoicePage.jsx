@@ -16,7 +16,7 @@ export default function InvoicePage() {
     <div className="invoice-page">
       <header className="invoice-topbar">
         <div className="invoice-topbar-left">
-          <span className="invoice-brand">PharmaCore ERP</span>
+          <span className="invoice-brand">Medureon ERP</span>
           <span className="invoice-divider" />
           <span>Invoice INV-2024-00892</span>
         </div>
@@ -36,7 +36,7 @@ export default function InvoicePage() {
                 Central Medical Plaza, Suite 402<br />
                 122 Healthcare Blvd, Metro City<br />
                 Phone: +1 (555) 098-4422<br />
-                Email: billing@pharmacore-erp.com
+                Email: billing@medureon-erp.com
               </div>
             </div>
             <div className="invoice-head-right">
@@ -119,7 +119,7 @@ export default function InvoicePage() {
       </main>
 
       <footer className="invoice-page-footer">
-        <span>© {new Date().getFullYear()} PharmaCore ERP Systems. Precise Care.</span>
+        <span>© {new Date().getFullYear()} Medureon ERP Systems. Precise Care.</span>
         <div className="invoice-footer-links">
           <a href="#privacy">Privacy Policy</a>
           <a href="#terms">Terms of Service</a>

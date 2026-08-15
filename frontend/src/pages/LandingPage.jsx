@@ -42,8 +42,8 @@ export default function LandingPage() {
           </div>
         </div>
 
-        <h1 className="hero-title">PHARMACY OS</h1>
-        <p className="hero-subtitle">Intelligent Management for Modern Pharmacies</p>
+        <h1 className="hero-title">MEDUREON OS</h1>
+        <p className="hero-subtitle">Intelligent Management for Modern Healthcare Operations</p>
 
         <div className="hero-cta">
           <Link to="/register" className="nav-btn">Create Institution Account</Link>
@@ -52,7 +52,7 @@ export default function LandingPage() {
       </main>
 
       <footer className="landing-footer">
-        © {new Date().getFullYear()} PharmaCore ERP Systems. Precise Care.
+        © {new Date().getFullYear()} Medureon ERP Systems. Precise Care.
       </footer>
     </div>
   );

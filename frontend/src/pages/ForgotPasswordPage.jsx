@@ -58,7 +58,7 @@ export default function ForgotPasswordPage() {
                   <input
                     id="email"
                     type="email"
-                    placeholder="name@pharmacy.com"
+                    placeholder="name@medureon.com"
                     value={email}
                     onChange={(e) => setEmail(e.target.value)}
                     required
@@ -79,7 +79,7 @@ export default function ForgotPasswordPage() {
       </main>
 
       <footer className="auth-footer">
-        © {new Date().getFullYear()} PharmaCore ERP Systems. Precise Care.
+        © {new Date().getFullYear()} Medureon ERP Systems. Precise Care.
         <div className="auth-footer-links">
           <a href="#privacy">Privacy Policy</a>
           <a href="#support">Contact Support</a>

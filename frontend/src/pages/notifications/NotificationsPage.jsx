@@ -50,7 +50,7 @@ export default function NotificationsPage() {
   const [filter, setFilter] = useState('All Alerts');
 
   return (
-    <AppShell active="Notifications" title="Notification Center" subtitle="Real-time clinical and operational alerts for your pharmacy network." actions={
+    <AppShell active="Notifications" title="Notification Center" subtitle="Real-time clinical and operational alerts for your Medureon network." actions={
       <button type="button" className="btn btn-solid"><Icon name="checkCircle" size={16} /> Mark All as Read</button>
     } searchPlaceholder="Search alerts...">
       <div className="stat-grid">

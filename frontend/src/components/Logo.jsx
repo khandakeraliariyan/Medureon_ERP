@@ -19,7 +19,7 @@ export default function Logo({ size = 28, showTagline = false }) {
         </svg>
       </span>
       <span className="pc-logo-text">
-        PharmaCore
+        Medureon
         {showTagline && <span className="pc-logo-sub">ERP</span>}
       </span>
     </div>

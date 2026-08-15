@@ -5,7 +5,7 @@ import '../../components/ui/ui.css';
 import './SettingsPage.css';
 
 const TABS = [
-  { key: 'profile', label: 'Pharmacy Profile', icon: 'building' },
+  { key: 'profile', label: 'Organization Profile', icon: 'building' },
   { key: 'branding', label: 'Branding & Logo', icon: 'palette' },
   { key: 'alerts', label: 'Email & Alerts', icon: 'mail' },
   { key: 'invoice', label: 'Invoice & Tax', icon: 'fileText' },
@@ -15,17 +15,17 @@ const TABS = [
 export default function SettingsPage() {
   const [tab, setTab] = useState('profile');
   const [form, setForm] = useState({
-    name: 'PharmaCore Solutions - Central',
+    name: 'Medureon Solutions - Central',
     license: 'RX-990-212-B',
     address: '102 Medical Plaza, Healthcare District, Suite 400, Chicago, IL 60601',
-    contact: 'admin@pharmacore.com',
+    contact: 'admin@medureon.com',
     phone: '+1 (555) 012-3456',
   });
 
   const update = (key) => (e) => setForm((f) => ({ ...f, [key]: e.target.value }));
 
   return (
-    <AppShell active="Settings" title="System Settings" subtitle="Manage your pharmacy ERP configuration, branding, and security preferences." searchPlaceholder="Search settings...">
+    <AppShell active="Settings" title="System Settings" subtitle="Manage your Medureon ERP configuration, branding, and security preferences." searchPlaceholder="Search settings...">
       <div className="settings-grid">
         <div className="settings-tabs">
           {TABS.map((t) => (
@@ -40,15 +40,15 @@ export default function SettingsPage() {
           <div className="panel">
             <div className="panel-header">
               <div>
-                <div className="panel-title">Pharmacy Profile</div>
-                <p className="panel-subtitle">Update your store&apos;s primary identification and contact details.</p>
+                <div className="panel-title">Organization Profile</div>
+                <p className="panel-subtitle">Update your business&apos;s primary identification and contact details.</p>
               </div>
               <button type="button" className="btn btn-solid">Save Changes</button>
             </div>
 
             <div className="settings-form-grid">
               <div className="form-field">
-                <label>Pharmacy Name</label>
+                <label>Organization Name</label>
                 <input className="plain-input" type="text" value={form.name} onChange={update('name')} />
               </div>
               <div className="form-field">
